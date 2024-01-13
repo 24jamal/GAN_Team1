@@ -16,6 +16,29 @@
             background-color: #F1EAFF;
         }
     </style>
+
+<!-- Add this script at the end of your body tag -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var scrollEndButton = document.getElementById("scroll-end");
+    
+        window.addEventListener("scroll", function () {
+            // Show the scroll end button when the user scrolls beyond a certain point
+            if (window.scrollY > 500) {
+                scrollEndButton.classList.add("show");
+            } else {
+                scrollEndButton.classList.remove("show");
+            }
+        });
+    
+        // Scroll to the top when the button is clicked
+        scrollEndButton.addEventListener("click", function () {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    });
+    </script>
+    
+    
 </head>
 <body>
 
@@ -88,14 +111,14 @@ This project leverages Generative Adversarial Networks (GANs) to revolutionize a
 </p>
     </section>
 
-    <section id="images">
+    <section id="images-original">
         <h2>Unprocessed Images- Original</h2>
-        <div class="image-container">
-            <!--<img src="1455.jpg" alt="Image 1"> -->
+        <div class="image-container_orig">
+            <img src="1455.jpg" alt="Image 1"> 
             <img src="1128.jpg" alt="Image 2">
-            <!--<img src="1444.jpg" alt="Image 3">  -->
+            <img src="1444.jpg" alt="Image 3">
             <img src="1162.jpg" alt="Image 4">
-            <!--<img src="1414.jpg" alt="Image 5">  -->
+            <img src="1414.jpg" alt="Image 5"> 
             <!-- Add more images as needed -->
         </div>
     </section>
@@ -326,4 +349,8 @@ To train a Generative Adversarial Network (GAN) for image generation of home blu
     
     </section>
 </body>
+
+<!-- Add this HTML at the end of your body tag -->
+<div id="scroll-end" title="Scroll to Top"><button>↑ Scroll to top</button></div>
+
 </html>

@@ -11,6 +11,23 @@ header {
     padding: 1em;
 }
 
+/* Add this style for the scroll end effect */
+#scroll-end {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+#scroll-end.show {
+    opacity: 1;
+}
+
+
 section {
     margin: 20px;
 }
@@ -36,7 +53,13 @@ p {
     flex-wrap: wrap;
     gap: 10px;
 }
-.image-container10 {
+.image-container_orig {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.plant-container{
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
@@ -94,3 +117,41 @@ video {
     max-height: 100%;
 }
 
+
+header {
+    background-color: #4CAF50; /* Green color */
+    color: white;
+    text-align: center;
+    padding: 1em;
+    font-size: 1.5em;
+}
+
+
+section {
+    margin: 20px;
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+.image-container img,
+.plant-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-container img:hover,
+.plant-container img:hover {
+    transform: scale(1.1);
+}
+
+.container,
+section {
+    border: 2px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
