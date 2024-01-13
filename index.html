@@ -4,33 +4,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>GAN Mini project Team -1</title>
+    <title>Welcome to GAN Mini Project Team : 1</title>
+    
+    <style>
+        /* Add this style for the scrollable code block */
+        #code-block {
+            max-height: 300px; /* Set a maximum height for the code block */
+            overflow-y: scroll; /* Enable vertical scrolling */
+            border: 1px solid #ccc; /* Add a border for better visual separation */
+            padding: 10px; /* Add padding for better readability */
+            background-color: #F1EAFF;
+        }
+    </style>
 </head>
 <body>
 
     <header>
         <h1>GAN Mini project Team -1</h1>
     </header>
+    <div class="container">
+        <h1>Welcome to GAN Project</h1>
+        <p>Professor-In-Charge: Prof. Deivamani</p>
+        <p>Industry Expert: Mr. Muthumani</p>
+    </div>
 
     <section id="abstract">
         <h3> <bold>Team Members :-</bold> Mohamed Jamaludeen 2022179006 : Neeraj Kumar Jha - 2022179057 : Jatin Durai - 2022179051 </h3>
         <h2>Abstract</h2>
+        
         <p>
-            Title: GANs for Automated House Plan Innovation: Blueprint Preprocessing, Autoencoding, and Generation
+            Title: GANs for Automated House Plan Innovation: Blueprint Preprocessing, Autoencoding and Generation. <br>
 
-Abstract:
+This project leverages Generative Adversarial Networks (GANs) to revolutionize architectural design processes. It commences with meticulous blueprint preprocessing and employs autoencoding techniques to capture essential architectural features. The GAN then generates novel house plans, providing architects a powerful tool for efficient and creative design exploration. User collaboration is emphasized, integrating preferences and real-time feedback for adaptive design. Ethical considerations, including cultural sensitivity and environmental sustainability, are addressed to ensure responsible innovations. Scalability is a focal point, evaluating the framework's performance on diverse datasets and architectural styles. The project envisions a future where architects interact with dynamically generated 3D representations. Overall, it seeks to redefine architectural creativity, efficiency, and responsibility in the era of AI-assisted design.        
+</p>
+    </section>
 
-This project leverages Generative Adversarial Networks (GANs) to revolutionize architectural design processes. It commences with meticulous blueprint preprocessing and employs autoencoding techniques to capture essential architectural features. The GAN then generates novel house plans, providing architects a powerful tool for efficient and creative design exploration. User collaboration is emphasized, integrating preferences and real-time feedback for adaptive design. Ethical considerations, including cultural sensitivity and environmental sustainability, are addressed to ensure responsible innovations. Scalability is a focal point, evaluating the framework's performance on diverse datasets and architectural styles. The integration of augmented reality (AR) or virtual reality (VR) technologies is explored for immersive design experiences. The project envisions a future where architects interact with dynamically generated 3D representations. Overall, it seeks to redefine architectural creativity, efficiency, and responsibility in the era of AI-assisted design.        </p>
+    
+    <section id="process-steps">
+        
+        <h2>Dataset Preprocessing</h2>
+        
+        <p>
+<strong>1. Open Image in Photopea:</strong>
+   - Go to the [Photopea website](https://www.photopea.com/).
+   - Click on "File" in the top left corner and choose "Open" to load your blueprint image.
+<br>
+<strong>2. Check Current Resolution:</strong>
+   - Go to "Image" > "Image Size" and check the current resolution of your image.
+<br>
+<strong>3. Set Resolution to 96 DPI:</strong>
+   - If the resolution is different from 96 DPI, go to "Image" > "Image Size."
+   - Uncheck the "Resample" option to maintain the original pixel dimensions.
+   - Change the "Resolution" to 96 pixels/inch.
+   <br>
+   <strong>4.Crop and Resize:</strong> 
+   - Use the Crop tool to remove any unnecessary parts of the image.
+   - Resize the image to a consistent resolution suitable for your GAN input (e.g., 256x256 pixels).
+   <br>
+   <strong>5.Adjust Brightness and Contrast:</strong>
+   
+   - Go to "Image" > "Adjustments" > "Brightness/Contrast" to enhance or adjust the brightness and contrast as needed.
+   <br>
+   <strong>6.Remove Watermarks:</strong>
+   - Use the Eraser tool or the Clone Stamp tool to remove any watermarks or unwanted elements from the image.
+   <br>
+   <strong>7.Convert to Grayscale:</strong>
+   - If your GAN model works with grayscale images, convert the image to grayscale. Go to "Image" > "Mode" > "Grayscale."
+   <br>
+   <strong>8.Outline Only:</strong>
+   - Create a new folder named "Outline."
+   - Use tools such as the Pencil or Brush to outline the architectural features, such as walls, without internal details like doors.
+   - Save the outlined image in JPG format to the "Outline" folder.
+   <br>
+   <strong>9.Outline with Internal Walls and Doors:</strong>
+   - Create a new folder named "Outline_with_Internal_Walls_and_Doors."
+   - Outline the architectural features, including internal walls and doors, using the Pencil or Brush tool.
+   - Set the pixel size for doors to -1 and the pixel size for inner walls to -2. The pixel size for outer walls can remain consistent (e.g., 4 pixels).
+   - Save the outlined image in JPG format to the "Outline_with_Internal_Walls_and_Doors" folder.
+   <br>
+   <strong>10. Repeat for Multiple Images:</strong>
+    - If you have a dataset of blueprint images, repeat the above steps for each image in your dataset.
+    <br>       
+</p>
     </section>
 
     <section id="images">
         <h2>Unprocessed Images- Original</h2>
         <div class="image-container">
-            <img src="1455.jpg" alt="Image 1">
+            <!--<img src="1455.jpg" alt="Image 1"> -->
             <img src="1128.jpg" alt="Image 2">
-            <img src="1444.jpg" alt="Image 3">
+            <!--<img src="1444.jpg" alt="Image 3">  -->
             <img src="1162.jpg" alt="Image 4">
-            <img src="1414.jpg" alt="Image 5">
+            <!--<img src="1414.jpg" alt="Image 5">  -->
             <!-- Add more images as needed -->
         </div>
     </section>
@@ -59,16 +124,142 @@ This project leverages Generative Adversarial Networks (GANs) to revolutionize a
         </div>
     </section>
 
+    
+
     <section id="video">
-        <h2>Video</h2>
+        <h2>Video about the project</h2>
         <video controls class="center-video">
             
             <source src="GAN_video.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
+        
     </section>
     
 
+    <section id="code-block">
+        <h3>Plant Image Preprocessing</h3>
+        <pre>
+            <code>
+from torchvision.datasets import ImageFolder
+from torchvision.transforms import Compose, Resize, ToTensor
+
+transf = Compose([Resize((128, 128)), ToTensor()])
+noise_train = ImageFolder("./PlantVillage/Noisy_Dataset/Train_Data/", transform=transf)
+pure_train = ImageFolder("./PlantVillage/Pure_Dataset/Train_Data/", transform=transf)
+noise_test = ImageFolder("./PlantVillage/Noisy_Dataset/Test_Data/", transform=transf)
+pure_test = ImageFolder("./PlantVillage/Pure_Dataset/Test_Data/", transform=transf)
+
+pure_data = glob("./PlantVillage/Pure_Dataset/Train_Data/P*/*")
+
+# Use list comprehension to read and resize images
+pure_images = [
+resize(imread(file), (128, 128, 3), anti_aliasing=True) for file in pure_data
+]
+
+# Converting the images into float32 array
+images_pure = np.asarray(pure_images, dtype="float32")
+print("Dataset:", images_pure.shape)
+
+import matplotlib.pyplot as plt
+
+for i in range(9):
+plt.subplot(3, 3, i + 1)
+plt.axis("off")
+plt.imshow(images_pure[i], cmap="gray")
+
+test_data = glob("./PlantVillage/Noisy_Dataset/Test_Data/P*/*")
+
+# Use list comprehension to read and resize images
+images = [resize(imread(file), (128, 128, 3), anti_aliasing=True) for file in test_data]
+
+# Converting the images into float32 array
+images_test = np.asarray(images, dtype="float32")
+print("Dataset:", images_test.shape)
+
+for i in range(9):
+plt.subplot(3, 3, i + 1)
+plt.axis("off")
+plt.imshow(images_test[i], cmap="gray")
+
+test_data = glob("./PlantVillage/Pure_Dataset/Test_Data/P*/*")
+
+# Use list comprehension to read and resize images
+images = [resize(imread(file), (128, 128, 3), anti_aliasing=True) for file in test_data]
+
+# Converting the images into float32 array
+images_ground = np.asarray(images)
+images_ground = images_ground.astype("float32")
+print("Dataset:", images_ground.shape)
+
+from torchvision.datasets import ImageFolder
+from torchvision.transforms import Compose, Resize, ToTensor
+
+transf = Compose([Resize((128, 128)), ToTensor()])
+noise_train = ImageFolder("./PlantVillage/Noisy_Dataset/Train_Data/", transform=transf)
+pure_train = ImageFolder("./PlantVillage/Pure_Dataset/Train_Data/", transform=transf)
+noise_test = ImageFolder("./PlantVillage/Noisy_Dataset/Test_Data/", transform=transf)
+pure_test = ImageFolder("./PlantVillage/Pure_Dataset/Test_Data/", transform=transf)
+
+for i in range(9):
+plt.subplot(3, 3, i + 1)
+plt.axis("off")
+plt.imshow(images_ground[i], cmap="gray")
+
+import torch
+from torch.utils.data import TensorDataset, DataLoader
+
+train_loader = DataLoader(noise_train, batch_size=16)
+pure_loader = DataLoader(pure_train, batch_size=16)
+test_loader = DataLoader(noise_test, batch_size=16)
+ground_loader = DataLoader(pure_test, batch_size=16)
+
+model.eval()
+total_loss = 0.0
+
+# Iterate over batches in the train_loader and pure_loader
+for batch_idx, (x, y) in enumerate(zip(train_loader, pure_loader)):
+# Convert the images and labels to GPU for faster execution
+t_x, _ = x
+eval_x = t_x.to(device)
+t_y, _ = y
+eval_y = t_y.to(device)
+
+# Passing the data to the model (Forward Pass)
+decoded2 = model(eval_x)
+
+# Calculating mean square error loss
+loss = loss_func(decoded2, eval_y)
+print(loss)
+
+# Accumulate total loss
+total_loss += loss.item()
+
+# Save images (assuming save_pic is a function that saves the images)
+for i in range(len(decoded2)):
+save_pic(
+decoded2[i].cpu().data, name=f"./PlantVillage/Denoised_Images/ae_{i}.jpg"
+)
+
+for i in range(64):
+plt.subplot(8, 8, i + 1)
+plt.axis("off")
+plt.imshow(images_ground[i], cmap="gray")
+            </code>
+        </pre>
+    </section>
+
+    <section id="plant-images">
+        <h2>Processed Images in Plant Dataset</h2>
+        <div class="plant-container">
+            <img src="plant1.png" alt="Image 1">
+            <img src="plant2.png" alt="Image 2">
+            <img src="plant3.png" alt="Image 3">
+            <img src="plant4.png" alt="Image 4">
+            <img src="plant5.png" alt="Image 5">
+            <!-- Add more images as needed -->
+        </div>
+    </section>
 
 
     <section id="autoencoding">

@@ -16,11 +16,19 @@ section {
 }
 
 h2 {
-    color: #333;
+    color: turquoise;
 }
 
 p {
     line-height: 1.5;
+}
+.container {
+    color: palevioletred;
+    text-align: center;
+    padding: 20px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    background-color: whitesmoke;
 }
 
 .image-container {
